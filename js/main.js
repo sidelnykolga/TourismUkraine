@@ -46,8 +46,6 @@ const siteImg = {
 // Зберігаємо популярний сайт глобально
 let currentPopularSite = null;
 
-// =================== Статистика ===================
-// Беремо з localStorage або створюємо нову
 const statisticSite = JSON.parse(localStorage.getItem("statisticSite") || "{}");
 
 // Ініціалізація всіх сайтів у статистиці
@@ -102,3 +100,4 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
