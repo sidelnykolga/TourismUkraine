@@ -60,7 +60,11 @@ updateMostPopular();
 function goToSite(site) {
   // Збільшуємо лічильник
   statisticSite[site]++;
-
+  gtag('event', 'click_site', {
+    'site_id': site,
+    'site_name': siteNames[site] || site
+  });
+  
   // Зберігаємо в localStorage
   localStorage.setItem("statisticSite", JSON.stringify(statisticSite));
 
@@ -100,4 +104,5 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
 
