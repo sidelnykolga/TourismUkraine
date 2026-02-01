@@ -71,6 +71,13 @@ function goToSite(site) {
     'site_id': site,
     'site_name': siteNames[site] || site
   });
+
+  gtag('event', 'click', {
+        'event_category': 'button_click',
+        'event_label': 'Буковель',
+        'value': 1
+    });
+  
   // Відкриваємо сайт у новій вкладці
   window.open(siteUrls[site], "_blank");
 }
@@ -104,6 +111,7 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
 
 
 
