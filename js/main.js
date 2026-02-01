@@ -74,7 +74,7 @@ function goToSite(site) {
 
   gtag('event', 'click', {
         'event_category': 'button_click',
-        'event_label': 'Буковель',
+        'event_label': siteNames[site],
         'value': 1
     });
   
@@ -111,6 +111,7 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
 
 
 
