@@ -71,7 +71,7 @@ body {
 
 /* ===== кнопка "назад" ===== */
 .back {
-    margin-bottom: 20px;
+    margin: 15px 0 20px 15px; /*margin-bottom: 20px;*/
     padding: 8px 12px;
     cursor: pointer;
 }
@@ -171,4 +171,5 @@ body {
 #most-popular-footer:hover .popular-image img {
     transform: scale(1.05);
 }
+
 
