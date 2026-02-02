@@ -70,10 +70,24 @@ body {
 }
 
 /* ===== кнопка "назад" ===== */
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
 .back {
     margin: 15px 0 20px 15px; /*margin-bottom: 20px;*/
     padding: 8px 12px;
     cursor: pointer;
+}
+.top h2 {
+    display: inline-block;
+    margin: 0;
 }
 
 /* ===== картки сайтів ===== */
@@ -171,5 +185,6 @@ body {
 #most-popular-footer:hover .popular-image img {
     transform: scale(1.05);
 }
+
 
 
