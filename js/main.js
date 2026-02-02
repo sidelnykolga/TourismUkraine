@@ -10,7 +10,8 @@ const siteNames = {
   zhayvoronok: "Жайворонок",
   tepliVody: "Теплі води",
   solotvyno: "Термальні води Солотвино",
-  moreKs: "more.ks.ua"
+  moreKs: "more.ks.ua",
+  nemo: "Одесса Nemo"
 };
 
 const siteUrls = {
@@ -25,7 +26,8 @@ const siteUrls = {
   zhayvoronok: "https://zhayvoronok.net/",
   tepliVody: "https://tepli-vody.com.ua/",
   solotvyno: "https://solotvyno.info/termalni-vody/",
-  moreKs: "https://more.ks.ua/pansionat/kurort/82"
+  moreKs: "https://more.ks.ua/pansionat/kurort/82",
+  nemo: "https://odessa.nemohotels.com/"
 };
 
 const siteImg = {
@@ -40,7 +42,8 @@ const siteImg = {
   zhayvoronok: "https://zhayvoronok.net/wp-content/uploads/2024/12/main-banner-golovna-newyear.webp",
   tepliVody: "http://tepli-vody.com.ua/wp-content/uploads/2018/06/LEV_0092.jpg",
   solotvyno: "img/Solotvino.jpg",
-  moreKs: "https://more.ks.ua/Media/pic/logo.jpg"
+  moreKs: "https://more.ks.ua/Media/pic/logo.jpg",
+  nemo: "img/Nemo.jpg"
 };
 
 // Зберігаємо популярний сайт глобально
@@ -100,6 +103,7 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
 
 
 
