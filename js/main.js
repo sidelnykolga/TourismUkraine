@@ -1,4 +1,4 @@
-const siteNames = {
+ = laseconst siteNames = {
   bukovel: "Буковель",
   dragobrat: "Драгобрат",
   zaharBerkut: "Захар Беркут",
@@ -60,12 +60,16 @@ for (let site in siteUrls) {
 
 updateMostPopular();
 
-function goToSite(site) {  
+function goToSite(site, open = false) {  
    // Локальная статистика 
   statisticSite[site]++;
   localStorage.setItem("statisticSite", JSON.stringify(statisticSite));
   
   updateMostPopular();
+
+  if (open) {
+    window.open(siteUrls[site], "_blank");
+  }
 }
 
 // Функція, яка повертає найпопулярніший сайт
@@ -97,6 +101,7 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
 
 
 
