@@ -60,29 +60,6 @@ for (let site in siteUrls) {
 
 updateMostPopular();
 
-function goToSite(site) {
-  console.log("GA site_click:", {
-    site,
-    site_name: siteNames[site],
-    url: siteUrls[site]
-  });
-
-  if (typeof gtag === "function") {
-    gtag('event', 'site_click', {
-      site_name: siteNames[site],
-      event_label: site,
-      destination_url: siteUrls[site]
-    });
-  } else {
-    console.warn("gtag не найден");
-  }
-
-  statisticSite[site]++;
-  localStorage.setItem("statisticSite", JSON.stringify(statisticSite));
-  updateMostPopular();
-  window.open(siteUrls[site], "_blank");
-}
-
 function goToSite1(site) {
   // Отправляем событие в Google Analytics
   if (typeof gtag === "function") {
@@ -132,6 +109,7 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
 
 
 
