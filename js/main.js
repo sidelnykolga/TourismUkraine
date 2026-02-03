@@ -61,13 +61,20 @@ for (let site in siteUrls) {
 updateMostPopular();
 
 function goToSite(site) {
-  // Збільшуємо лічильник
-  statisticSite[site]++;
+  // Отправляем событие в Google Analytics
+  if (typeof gtag === "function") {
+    gtag('event', 'site_click', {
+      event_category: 'Outbound',
+      event_label: site,
+      site_name: siteNames[site],
+      destination_url: siteUrls[site]
+    });
+  }
   
-  // Зберігаємо в localStorage
+   // Локальная статистика 
+  statisticSite[site]++;
   localStorage.setItem("statisticSite", JSON.stringify(statisticSite));
-
-  // Оновлюємо блок найпопулярнішого сайту
+  
   updateMostPopular();
   
   // Відкриваємо сайт у новій вкладці
@@ -103,6 +110,7 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
 
 
 
