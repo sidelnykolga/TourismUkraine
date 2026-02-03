@@ -101,7 +101,6 @@ function goToSite1(site) {
   updateMostPopular();
   
   // Відкриваємо сайт у новій вкладці
-  window.open(siteUrls[site], "_blank");
 }
 
 // Функція, яка повертає найпопулярніший сайт
@@ -133,6 +132,7 @@ function updateMostPopular() {
   footer.querySelector(".popular-site-count").textContent = maxCount;
   footer.querySelector(".popular-site-img").src = popularSiteImg;
 }
+
 
 
 
